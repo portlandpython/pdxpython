@@ -13,11 +13,23 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+# 12 factor app design. See http://12factor.net/config
+def get_environment_variable(key, default=None):
+    """ Retrive config settings from the environment """
+    value = os.environ.get(key, default)
+    if value == 'True':
+        return True
+    elif value == 'False':
+        return False
+    else:
+        return value
+        
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'nnh1g!yn4n8wd%0b6^hklalf&(4mn7@c^hz*^b7-t5^nh!r$l0'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
