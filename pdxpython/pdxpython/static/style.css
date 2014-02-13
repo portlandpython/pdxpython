@@ -1,0 +1,90 @@
+body {
+    font-family: 'Georgia', sans-serif;
+    font-size: 16px;
+    color: #748189;
+}
+
+a {
+    color: #748189;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #222;
+}
+
+h1 {
+    font-size: 30px;
+    color: #748189;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #748189;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+address {
+    font-style: normal;
+}
+
+.container {
+    width: 1170px; /* media query */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* nav */
+
+#top-nav {
+    height: 60px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.nav {
+    list-style-type: none;
+    padding-right: 40px;
+}
+
+#top-nav > .nav {
+    float: right;
+    margin-right: -15px;
+}
+
+#top-nav > .nav > li {
+    float: left;
+    text-align: center;
+}
+
+#top-nav > .nav > li > a {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+    text-transform: capitalize;
+}
+
+#left-nav {
+    float: left;
+    width: 10%
+}
+
+#left-nav > .nav > li {
+    border-bottom: 1px solid #e7e7e7;;
+}
+
+#left-nav > .nav > li > a {
+    line-height: 2em;
+}
+
+/* footer */
+
+#footer {
+    padding-top: 15px;
+    clear: both;
+    text-align: center;
+}
