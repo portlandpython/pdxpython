@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDX-Python</title>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "cal-style.css" %}" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="top-nav">
+        <ul class="nav">
+          <li><a href="#">home</a></li>
+          <li><a href="#">recent talks</a></li>
+          <li><a href="#">propose a talk</a></li>
+          <li><a href="#">community</a></li>
+        </ul>
+      </div>
+
+      <div id="left-nav">
+        <ul class="nav">
+          <li><a href="#">G+</a></li>
+          <li><a href="#">Github</a></li>
+          <li><a href="#">Meetup</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Wiki</a></li>
+        </ul>
+      </div>
+
+      <div id="calendar">
+        {% for event in events %}
+        <div class="date">{{ event.date }}</div>
+        <div class="title">{{ event.name }}</div>
+        <div class="event">
+          <div class="details">
+            <address>
+              {{ event.venue.name }}
+              {{ event.venue.address_1 }}
+              {{ event.venue.city }}
+              {{ event.venue.state }}
+              {{ event.venue.zip }}
+            </address>
+          </div>
+          <div class="description">
+            {{ event.description | safe }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div id="footer">
+        footer
+      </div>
+
+    </div> <!-- container -->
+  </body>
+</html>

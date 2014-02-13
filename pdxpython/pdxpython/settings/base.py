@@ -29,12 +29,12 @@ def get_environment_variable(key, default=None):
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+# SECRET_KEY set by development or production settings file
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -92,3 +92,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'))
+
+# Meetup
+
+MEETUP_API_KEY = get_environment_variable('MEETUP_API_KEY')
+
+MEETUP_GROUP_NAME = 'pdxpython'
