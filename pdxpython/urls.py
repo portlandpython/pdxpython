@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     # index page
-    url(r'^$', 'pdxpython.views.index', name='index'),
+    url(r'^$', 'apps.home.views.index', name='index'),
 
     # admin
     url(r'^admin/', include(admin.site.urls)),

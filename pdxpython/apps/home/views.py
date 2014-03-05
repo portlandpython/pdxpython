@@ -16,4 +16,4 @@ def index(request):
     results = r.json().get('results')
     for result in results:
         result['date'] = datetime.datetime.utcfromtimestamp(result['time'] / 1000)
-    return render(request, 'pdxpython/index.html', {'events': results})
+    return render(request, 'index.html', {'events': results})
