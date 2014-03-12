@@ -17,3 +17,6 @@ build
 
 # SQLite3 database files:
 *.db
+
+# Node
+node_modules
