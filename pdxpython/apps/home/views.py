@@ -1,19 +1,22 @@
 import datetime
+import json
 
 from django.conf import settings
 from django.shortcuts import render
+from django.http import HttpResponse
 
 import requests
 
 
 def index(request):
-    print settings.MEETUP_API_KEY
+    return render(request, 'index.html')
+
+
+def meetup_calendar(request):
     request_params = {
         'key': settings.MEETUP_API_KEY,
         'group_urlname': settings.MEETUP_GROUP_NAME,
     }
     r = requests.get('http://api.meetup.com/2/events', params=request_params)
-    results = r.json().get('results')
-    for result in results:
-        result['date'] = datetime.datetime.utcfromtimestamp(result['time'] / 1000)
-    return render(request, 'index.html', {'events': results})
+    result = r.json().get('results')
+    return HttpResponse(json.dumps(result), content_type="application/json")
