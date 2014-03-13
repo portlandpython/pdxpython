@@ -10,7 +10,7 @@ Requirements
 
 **You'll need to have the following installed in your development environment.**
 
-* `Python 2.7.X <http://www.python.org/download/releases/2.7.6/>`_
+* `Python 2.7.x <http://www.python.org/download/releases/2.7.6/>`_
 * `Virtualenv <http://www.virtualenv.org/en/latest/virtualenv.html#installation>`_
 * `Grunt <http://gruntjs.com/>`_
 * `Node.js <http://nodejs.org/>`_
