@@ -1,6 +1,7 @@
 # Project specific
 development.env
 venv
+module.js
 
 # Python bytecode:
 *.py[co]
