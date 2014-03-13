@@ -33,7 +33,7 @@ Installation
 * grunt
 * ./runserver
 
-Then open your browser and visit `localhost:8000 <http://nodejs.org/>`_. You should see a list of upcoming events.
+Then open your browser and visit `localhost:8000 <http://localhost:8000/>`_. You should see a list of upcoming events.
 
 License
 -------
