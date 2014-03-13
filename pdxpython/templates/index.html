@@ -29,24 +29,6 @@
       </div>
 
       <div id="calendar">
-        {% for event in events %}
-        <div class="date">{{ event.date }}</div>
-        <div class="title">{{ event.name }}</div>
-        <div class="event">
-          <div class="details">
-            <address>
-              {{ event.venue.name }}
-              {{ event.venue.address_1 }}
-              {{ event.venue.city }}
-              {{ event.venue.state }}
-              {{ event.venue.zip }}
-            </address>
-          </div>
-          <div class="description">
-            {{ event.description | safe }}
-          </div>
-        </div>
-        {% endfor %}
       </div>
 
       <div id="footer">
@@ -54,5 +36,28 @@
       </div>
 
     </div> <!-- container -->
+    <script src="static/module.js" type="text/javascript"></script>
+      {% verbatim %}
+    <script id="calendarTemplate" type="text/template">
+      {{#events}}
+      <div class="date">{{#date}}{{time}}{{/date}}</div>
+      <div class="title">{{name}}</div>
+      <div class="event">
+        <div class="details">
+          <address>
+            {{venue.name}}
+            {{vent.venue.address_1}}
+            {{venue.city}}
+            {{venue.state}}
+            {{venue.zip}}
+          </address>
+        </div>
+        <div class="description">
+          {{{description}}}
+        </div>
+      </div>
+      {{/events}}
+    </script>
+      {% endverbatim %}
   </body>
 </html>
