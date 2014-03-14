@@ -1,0 +1,36 @@
+.nav {
+    list-style-type: none;
+    padding-right: 40px;
+}
+
+#left-nav { 
+  float: left;
+  width: 10%;
+  .nav  {
+    li {
+      border-bottom: @nav-border-bottom;
+      a {
+        line-height: 2em;
+      }
+    }
+  }
+}
+
+#top-nav {
+  height: 60px;
+  border-bottom: @nav-border-bottom;
+  .nav {
+    float: right;
+    margin-right: -15px;
+    li {
+      float: left;
+      text-align: center;
+      a {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
