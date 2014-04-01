@@ -21,3 +21,6 @@ build
 
 # Node
 node_modules
+
+# Less
+*.css
