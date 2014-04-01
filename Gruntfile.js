@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           paths: ['client-side/less']
         },
         files: {
-          'pdxpython/static/style.css': 'client-side/style.less'
+          'pdxpython/static/style.css': 'client/style.less'
         }
       }
     }
