@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         options: {
-          paths: ['client-side/less']
+          paths: ['client/less']
         },
         files: {
           'pdxpython/static/style.css': 'client/style.less'
