@@ -4,9 +4,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'pdxpython.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
     # index page
     url(r'^$', 'apps.home.views.index', name='index'),
