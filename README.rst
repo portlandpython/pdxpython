@@ -31,7 +31,7 @@ Installation
   i.e. "export MEETUP_API_KEY=my-api-key"
 * npm install
 * grunt
-* ./runserver
+* ./runserver.sh
 
 Then open your browser and visit `localhost:8000 <http://localhost:8000/>`_. You should see a list of upcoming events.
 
