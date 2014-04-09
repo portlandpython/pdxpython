@@ -1,4 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
-source development.env
 django-admin.py runserver --settings=settings.development --pythonpath=pdxpython

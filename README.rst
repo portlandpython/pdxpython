@@ -25,8 +25,9 @@ Installation
     $ git clone https://github.com/pdxpython/pdxpython.git
     $ cd pdxpython
     $ virtualenv --no-site-packages venv
-    $ source env/bin/activate
+    $ source venv/bin/activate
     $ pip install -r requirements/development.txt
+    $ python pdxpython/manage.py syncdb
     $ cp development.env.dist development.env
 
 Add your Meetup.com API Key to the development.env file. i.e. "export MEETUP_API_KEY=my-api-key" 
