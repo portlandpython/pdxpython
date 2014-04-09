@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     browserify: {
       dist: {
         files: {
-          'pdxpython/static/module.js': ['javascript/**/*.js']
+          'pdxpython/static/module.js': ['client/js/**/*.js']
         }
       }
     },
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           paths: ['client/less']
         },
         files: {
-          'pdxpython/static/style.css': 'client/style.less'
+          'pdxpython/static/style.css': 'client/less/main.less'
         }
       }
     }
