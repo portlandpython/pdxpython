@@ -12,7 +12,7 @@ Requirements
 
 * `Python 2.7.x <http://www.python.org/download/releases/2.7.6/>`_
 * `Virtualenv <http://www.virtualenv.org/en/latest/virtualenv.html#installation>`_
-* `Grunt <http://gruntjs.com/>`_
+* `Grunt.js <http://gruntjs.com/>`_
 * `Node.js <http://nodejs.org/>`_
 
 Installation
@@ -20,20 +20,26 @@ Installation
 
 **Install by running:**
 
-* git clone https://github.com/pdxpython/pdxpython.git
-* cd pdxpython
-* virtualenv --no-site-packages env
-* source env/bin/activate
-* pip install -r requirements/development.txt
-* cp development.env.dist development.env
-* Add your Meetup.com API Key to the development.env file. 
-  You can obtain the key at `https://secure.meetup.com/meetup_api/key/ <https://secure.meetup.com/meetup_api/key/>`_.
-  i.e. "export MEETUP_API_KEY=my-api-key"
-* npm install
-* grunt
-* ./runserver.sh
+.. code-block:: bash
 
-Then open your browser and visit `localhost:8000 <http://localhost:8000/>`_. You should see a list of upcoming events.
+    $ git clone https://github.com/pdxpython/pdxpython.git
+    $ cd pdxpython
+    $ virtualenv --no-site-packages venv
+    $ source env/bin/activate
+    $ pip install -r requirements/development.txt
+    $ cp development.env.dist development.env
+
+Add your Meetup.com API Key to the development.env file. i.e. "export MEETUP_API_KEY=my-api-key" 
+You can obtain your key at `https://secure.meetup.com/meetup_api/key/ <https://secure.meetup.com/meetup_api/key/>`_.
+
+.. code-block:: bash
+
+    $ source development.env
+    $ npm install
+    $ grunt
+    $ ./runserver.sh
+
+Then open a browser and visit `localhost:8000 <http://localhost:8000/>`_. You should see a list of upcoming events.
 
 License
 -------
