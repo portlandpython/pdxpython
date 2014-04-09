@@ -1,6 +1,7 @@
 # Project specific
 development.env
-venv
+venv/
+env/
 module.js
 
 # Python bytecode:
@@ -18,6 +19,7 @@ build
 
 # SQLite3 database files:
 *.db
+*.sqlite3
 
 # Node
 node_modules
