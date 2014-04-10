@@ -12,8 +12,8 @@ Requirements
 
 * `Python 2.7.x <http://www.python.org/download/releases/2.7.6/>`_
 * `Virtualenv <http://www.virtualenv.org/en/latest/virtualenv.html#installation>`_
-* `Grunt.js <http://gruntjs.com/>`_
 * `Node.js <http://nodejs.org/>`_
+* `Grunt.js <http://gruntjs.com/>`_
 
 Installation
 ------------
@@ -27,7 +27,6 @@ Installation
     $ virtualenv --no-site-packages venv
     $ source venv/bin/activate
     $ pip install -r requirements/development.txt
-    $ python pdxpython/manage.py syncdb
     $ cp development.env.dist development.env
 
 Add your Meetup.com API Key to the development.env file. i.e. "export MEETUP_API_KEY=my-api-key" 
@@ -36,6 +35,7 @@ You can obtain your key at `https://secure.meetup.com/meetup_api/key/ <https://s
 .. code-block:: bash
 
     $ source development.env
+    $ python pdxpython/manage.py syncdb
     $ npm install
     $ grunt
     $ ./runserver.sh
