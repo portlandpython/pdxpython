@@ -6,9 +6,12 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+ENV_FILE = os.path.join(BASE_DIR, '../development.env')
+
 INSTALLED_APPS += (
     'debug_toolbar',
     'django_extensions',
+    'django_env_server'
 )
 
 DATABASES = {
